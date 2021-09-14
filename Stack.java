@@ -1,15 +1,18 @@
 /**
- * Stack --- program to implement a basic stack data structure using an array
+ * The class Stack to create and implement a basic stack data structure using an array.
  * @author  Joseph Larson
  * 
  */
 public class Stack {
     static final int MAX = 1000;    //Maximum size of stack
-    int top; 
+    /**
+     * The current top of the stack
+     */
+    private int top; 
     int stack[] = new int[MAX]; //Integer Array to represent the stack
 
     /**
-     * Initiates the stack data structure.
+     * Initiates the stack data structure, starting at -1 to indicate a empty stack.
      */
     public Stack(){
         top = -1;
