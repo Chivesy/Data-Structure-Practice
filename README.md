@@ -13,7 +13,7 @@ Personal practice to learn and improve understanding of a Stack Data Structure.
 3) Compile with **javac Main.java** and **javac Stack.java**
 4) Run with **java Main**
 
-**Steps to run JavaDoc**
+**Steps to run javadoc:**
 1) Clone repository
 2) Navigate to folder location
 3) Run javadoc with javadoc -d ./docs *.java
