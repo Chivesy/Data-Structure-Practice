@@ -10,9 +10,8 @@ public class Stack {
 
     /**
      * Initiates the stack data structure.
-     * @return No return value.
      */
-    Stack(){
+    public Stack(){
         top = -1;
     }
 
@@ -20,7 +19,7 @@ public class Stack {
      * Checks if the stack is empty.
      * @return False: stack not empty. True: stack is empty
      */
-    boolean isEmpty(){
+    public boolean isEmpty(){
         if (top < 0){
             return true;
         } 
@@ -34,7 +33,7 @@ public class Stack {
      * @param x integer value to add to stack
      * @return False: integer not added to stack. True: integer added to stack
      */
-    boolean push(int x){
+    public boolean push(int x){
         //Confirm space in array to add stack item
         if(top >= MAX - 1){
             System.out.println("Stack Overflow");
@@ -53,7 +52,7 @@ public class Stack {
      * Remove an item from the stack.
      * @return value of item removed from stack, otherwise 0 if stack Underflow issue.
      */
-    int pop(){
+    public int pop(){
         //Confirm item exists in stack array to be removed
         if(top < 0){
             System.out.println("Stack Underflow");
@@ -71,7 +70,7 @@ public class Stack {
      * Looks at the current item at the top of the stack.
      * @return value of item at the top of the stack.
      */
-    int peek(){
+    public int peek(){
         if (top < 0){ //Confirm item exists
             System.out.println("Stack Underflow");
             return 0;
@@ -86,7 +85,7 @@ public class Stack {
     /**
      * Prints out all the values currently in the stack.
      */
-    void print() {
+    public void print() {
         System.out.println("Elements currently present in Stack: ");
         //Print stack from top to bottom
         for(int i = top; i >= 0; i--){

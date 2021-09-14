@@ -1,7 +1,10 @@
 /**
- * Driver program to run basic stack datastructure program.
+ * Driver program to run basic stack data structure program.
  */
 public class Main {
+    /** Main program to run basic stack data structure program.
+     *  @param args no arguments required.
+     */
     public static void main(String[] args) {
         Stack s = new Stack();
         s.push(10);
@@ -10,6 +13,8 @@ public class Main {
         s.pop();
         s.peek();
         s.print();
+        Boolean empty = s.isEmpty();
+        System.out.println("The Stack is currently empty: " + empty);
     }
 }
 
