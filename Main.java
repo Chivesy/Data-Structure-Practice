@@ -1,5 +1,6 @@
 /**
  * Driver program to run stack data structure programs. Array and Linked List implementations.
+ * @author Joseph Larson
  */
  public class Main {
     /** Main program to run stack data structure programs. Array and Linked List implementations.

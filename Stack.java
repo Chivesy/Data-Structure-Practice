@@ -1,7 +1,6 @@
 /**
  * The class Stack to create and implement a basic stack data structure using an array.
  * @author  Joseph Larson
- * 
  */
 public class Stack {
     static final int MAX = 1000;    //Maximum size of stack
