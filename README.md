@@ -1,5 +1,7 @@
 # Stack-Data-Structure
-Personal practice to learn and improve understanding of a Stack Data Structure.
+Personal practice to review and improve data structure knowledge.
+
+**Stack with Array and Stack using Linked List**
 
 **Main Stack Operations:**  
 ***Push:*** Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.  
@@ -10,7 +12,7 @@ Personal practice to learn and improve understanding of a Stack Data Structure.
 **Steps to run program:**
 1) Clone repository
 2) Navigate to folder location
-3) Compile with **javac Main.java** and **javac Stack.java**
+3) Compile with **javac Main.java**, **javac Stack.java**, and **javac StackAsLinkedList**
 4) Run with **java Main**
 
 **Steps to run javadoc:**
@@ -19,3 +21,13 @@ Personal practice to learn and improve understanding of a Stack Data Structure.
 3) Run javadoc with javadoc -d ./docs *.java
 4) Navigate to created **./docs** folder
 5) Double click file **index.html** to open webpage for documentation
+
+TODO LIST:
+Arrays?
+Linked List
+Queues
+Trees
+Hash Tables
+Heaps
+Graphs
+Test Cases
