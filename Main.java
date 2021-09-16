@@ -3,7 +3,9 @@
  * @author Joseph Larson
  */
  public class Main {
-    /** Main program to run stack data structure programs. Array and Linked List implementations.
+    /** Main program to run various data structure programs. 
+     * Currently have the following data structures implemented:
+     * Stack with array, Stack with Linked List, Single Linked List
      *  @param args no arguments required.
      */
     public static void main(String[] args) {
