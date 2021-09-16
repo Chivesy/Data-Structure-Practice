@@ -22,12 +22,12 @@ Personal practice to review and improve data structure knowledge.
 4) Navigate to created **./docs** folder
 5) Double click file **index.html** to open webpage for documentation
 
-TODO LIST:
-Arrays?
-Linked List
-Queues
-Trees
-Hash Tables
-Heaps
-Graphs
-Test Cases
+TODO LIST:  
+1) Arrays?  
+2) Linked List  
+3) Queues  
+4) Trees  
+6) Hash Tables  
+7) Heaps  
+8) Graphs  
+9) Test Cases  
