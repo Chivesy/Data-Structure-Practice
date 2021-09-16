@@ -39,6 +39,7 @@ public class SingleLinkedList {
         
         newNode.next = head;    //Next pointer now points to current head;
         head = newNode;         //Adjust head 
+        System.out.println(newData + ": added to Linked List");
     }
     /**
      * Function to insert a new Node after a given node in list.
@@ -52,11 +53,12 @@ public class SingleLinkedList {
         }
         Node newNode = new Node(newData);   //Allocate Node and add data
         newNode.next = prevNode.next;       
-        prevNode.next = newNode;            
+        prevNode.next = newNode;
+        System.out.println(newData + ": added to Linked List");            
     }
 
     /**
-     * Function to inert a new Node at the end of the Linked List.
+     * Function to insert a new Node at the end of the Linked List.
      * @param newData integer data to be added to new Node being added to linked List.
      */
     public void insertEnd(int newData){
@@ -73,6 +75,129 @@ public class SingleLinkedList {
         }
         cur.next = newNode;
         newNode.next = null;
+        System.out.println(newData + ": added to Linked List");
         return;
+    }
+
+    /**
+     * Function to delete key (integer data) from linked list. 
+     * @param keyData data to find and remove from linked list. Removes first occurence.
+     */
+    public void deleteKey(int keyData){
+        //Check if headnode needs to be deleted
+        if(head != null && head.data == keyData){
+            head = head.next;
+            return;
+        }
+
+        //Iterate through linked list
+        Node curNode = head;
+        Node prev = null;
+        while(curNode != null && curNode.data != keyData){
+            prev = curNode;
+            curNode = curNode.next;
+        }
+
+        // Key was not found in Linked List
+        if(curNode == null){
+            System.out.println(keyData + ": Not found in linked list.");
+            return;
+        }
+        //Unlink the node from linked list
+        prev.next = curNode.next;
+        System.out.println(keyData + ": Removed from linked list.");
+    }
+    /** Function to delete current linked list */
+    public void deleteList(){
+        head = null;
+        System.out.println("Linked list deleted");
+    }
+
+    /**
+     * Function to return current length of the Linked List.
+     * @return returns an integer of current length of the Linked List.
+     */
+    public int listLength(){
+        int count = 0;
+        Node curNode = head;
+        while(curNode != null){
+            count++;
+            curNode = curNode.next;
+        }
+        return count;
+    }
+    /**
+     * Function to return current length of the Linked List (Recursive)
+     * @param head Pointer to the head node of the Linked List.
+     * @return returns an integer of current length of the Linked List.
+     */
+    public int recListLength(Node head){
+        if(head == null){
+            return 0;
+        }
+        return 1 + recListLength(head.next);
+    }
+
+    /**
+     * Function to return if a Key exists in the Linked List
+     * @param keyData Key or Data that we are searching for in Linked List.
+     * @return returns true if key found, otherwise false.
+     */
+    public boolean search(int keyData){
+        Node curNode = head;
+        while (curNode != null){
+            if (curNode.data == keyData){
+                return true;
+            }
+            curNode = curNode.next;
+        }
+        return false;
+    }
+
+    /** Function sorts the current Linked List in ascending order */
+    public void sortBubble(){
+        Node curNode = head;
+        Node nextNode = null;
+        int temp;   //holds the values while we swap data
+
+        // empty list nothing to sort
+        if (head == null){
+            return;
+        }
+
+        while (curNode != null){
+            nextNode = curNode.next;
+
+            while(nextNode != null){
+                if (curNode.data > nextNode.data){
+                    temp = curNode.data;
+                    curNode.data = nextNode.data;
+                    nextNode.data = temp;
+                    
+                }
+                nextNode = nextNode.next;
+            }
+            curNode = curNode.next;
+        }
+    }
+
+    /**
+     * Function adds a new Node into the Linked in ascending order
+     * @param newData Data to be added into the linked list.
+     */
+    public void sortedInsert(int newData){
+        Node newNode = new Node(newData);
+
+        if (head.data > newNode.data){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        Node curNode = head;
+        while(curNode.next != null && curNode.next.data < newData){
+            curNode = curNode.next;
+        }
+        newNode.next = curNode.next;
+        curNode.next = newNode;
     }
 }

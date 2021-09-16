@@ -43,13 +43,45 @@
         // Testing Linked List Implementation
         System.out.println("\nImplementation of a Linked List\n");
         SingleLinkedList sll = new SingleLinkedList();
+        int length = sll.listLength();
+        System.out.println("LinkedList current length is: " + length);
+        length = sll.recListLength(sll.head);
+        System.out.println("(Recursive) LinkedList current length is: " + length);
         sll.printLinkedList();
         sll.addToFront(5);
         sll.insertEnd(15);
         sll.insertEnd(20);
         sll.addToFront(1);
+        length = sll.listLength();
+        System.out.println("LinkedList current length is: " + length);
+        length = sll.recListLength(sll.head);
+        System.out.println("(Recursive) LinkedList current length is: " + length);
         sll.insertAfter(sll.head.next, 10);
+        System.out.println("10 in the Linked List: " + sll.search(10));
+        System.out.println("82 in the Linked List: " + sll.search(82));
         sll.printLinkedList();
+        sll.deleteKey(3);
+        sll.deleteKey(15);
+        sll.printLinkedList();
+        sll.deleteList();
+        sll.printLinkedList();
+
+        // Testing sort
+        sll.addToFront(100);
+        sll.insertEnd(25);
+        sll.insertEnd(60);
+        sll.addToFront(500);
+        sll.printLinkedList();
+        System.out.println("Checking that sort method works");
+        sll.sortBubble();
+        sll.printLinkedList();
+        System.out.println("Checking sortedInsert method");
+        sll.sortedInsert(50000);
+        sll.sortedInsert(30);
+        sll.sortedInsert(10);
+        sll.printLinkedList();
+        
+
+        
     }
 }
-
