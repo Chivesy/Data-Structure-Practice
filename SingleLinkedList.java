@@ -31,8 +31,8 @@ public class SingleLinkedList {
         }
     }
     /**
-     * Function to insert a new Node to the front of the linked list
-     * @param newData integer data to be added to new Node being added to Linked List
+     * Function to insert a new Node to the front of the linked list.
+     * @param newData integer data to be added to new Node being added to Linked List.
      */
     public void addToFront(int newData){
         Node newNode = new Node(newData);
@@ -42,8 +42,8 @@ public class SingleLinkedList {
     }
     /**
      * Function to insert a new Node after a given node in list.
-     * @param prevNode
-     * @param newData
+     * @param prevNode pointer to node in linked list we want to add a new Node after.
+     * @param newData integer data to be added to new Node being added to Linked List.
      */
     public void insertAfter(Node prevNode, int newData){
         if (prevNode == null){
@@ -56,8 +56,8 @@ public class SingleLinkedList {
     }
 
     /**
-     * Function to inert a new Node at the end of the Linked List
-     * @param newData
+     * Function to inert a new Node at the end of the Linked List.
+     * @param newData integer data to be added to new Node being added to linked List.
      */
     public void insertEnd(int newData){
         Node newNode = new Node(newData);
