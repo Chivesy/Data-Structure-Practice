@@ -58,7 +58,9 @@
         System.out.println("LinkedList current length is: " + length);
         length = sll.recListLength(sll.head);
         System.out.println("(Recursive) LinkedList current length is: " + length);
-        sll.insertAfter(sll.head.next, 10);
+        SingleLinkedList.Node test = sll.head.next;
+        sll.insertAfter(test, 10);
+        // sll.insertAfter(sll.head.next, 10);
         System.out.println("10 in the Linked List: " + sll.search(10));
         System.out.println("82 in the Linked List: " + sll.search(82));
         sll.printLinkedList();
@@ -82,8 +84,6 @@
         sll.sortedInsert(30);
         sll.sortedInsert(10);
         sll.printLinkedList();
-        
 
-        
     }
 }

@@ -2,7 +2,7 @@
  * linked list data structure.
  * @author Joseph Larson
  */
-public class DoubeLinkedList {
+public class DoubleLinkedList {
     Node head;
 
     static class Node {
@@ -108,6 +108,10 @@ public class DoubeLinkedList {
         newNode.prev = curNode;
     }
 
+    /**
+     * Function to remove provided Node from the double linked list.
+     * @param del node provided to be removed from linked list.
+     */
     public void deleteNode(Node del){
         if (head == null || del == null){
             return;
