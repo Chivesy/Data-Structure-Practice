@@ -136,5 +136,15 @@ public class DoubleLinkedList {
         return;
     }
 
+    public void printList(){
+        if(head == null){
+            System.out.println("Double Linked List is currently empty");
+        }
 
+        Node curNode = head;
+        while(curNode != null){
+            System.out.print(curNode.data + ", ");
+            curNode = curNode.next;
+        }
+    }
 }
