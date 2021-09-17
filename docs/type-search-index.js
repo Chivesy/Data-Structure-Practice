@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"SingleLinkedList"},{"p":"<Unnamed>","l":"Stack"},{"p":"<Unnamed>","l":"StackAsLinkedList"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"DoubleLinkedList"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"SingleLinkedList"},{"p":"<Unnamed>","l":"Stack"},{"p":"<Unnamed>","l":"StackAsLinkedList"}];updateSearchResults();
