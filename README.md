@@ -17,16 +17,19 @@ Overall this page and or project is for personal practice to review and improve 
 
 **Steps to run program:**
 1) Clone repository
-2) Navigate to folder location
-3) Compile with **javac Main.java** **Stack.java** **StackAsLinkedList.java** **SingleLinkedList.java** **DoubleLinkedList.java**
-4) Run with **java Main**
+2) Navigate to folder location installed
+3) Open terminal
+4) Compile with **make**  
+5) Run with **java Main**  
+***NOTE*** Used https://community.chocolatey.org/packages/make#install to use GNU make capabilities on windows computer.
 
 **Steps to run javadoc:**
 1) Clone repository
-2) Navigate to folder location
-3) Run javadoc with javadoc -d ./docs *.java
-4) Navigate to created **./docs** folder
-5) Double click file **index.html** to open webpage for documentation
+2) Navigate to folder location installed
+3) Open terminal
+4) Run javadoc with javadoc -d ./docs *.java
+5) Navigate to created **./docs** folder
+6) Double click file **index.html** to open webpage for documentation
 
 TODO LIST:  
 1) Arrays?  
