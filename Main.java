@@ -85,5 +85,17 @@
         sll.sortedInsert(10);
         sll.printLinkedList();
 
+        //Testing DoubleLinkedList
+        DoubleLinkedList dll = new DoubleLinkedList();
+        dll.insertFront(10);
+        dll.insertFront(9);
+        dll.insertFront(8);
+        dll.insertEnd(11);
+        dll.insertEnd(12);
+        dll.insertBefore(dll.head.next, 100);
+        dll.insertAfter(dll.head.next, 50);
+        dll.deleteNode(dll.head);
+        dll.printList();
+
     }
 }
