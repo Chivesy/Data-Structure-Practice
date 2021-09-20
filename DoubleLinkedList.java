@@ -137,6 +137,83 @@ public class DoubleLinkedList {
     }
 
     /**
+     * Function to check if an element is in the Double Linked List
+     * @param data integer data to search linked list for.
+     * @return true if found, false if element data not in linked list.
+     */
+    public boolean containsElement(int data){
+        if (head == null){
+            return false;
+        }
+
+        Node curNode = head;
+        while(curNode != null){
+            if(curNode.data == data){
+                return true;
+            }
+            curNode = curNode.next;
+        }
+        return false;
+    }
+
+    public void sortListAscending(){
+        Node curNode = head;
+        Node nextNode = null;
+        int temp; // variable to hold data while we swap.
+
+        // empty list, nothing to sort.
+        if(head == null){
+            return;
+        }
+
+        // Bubble sort
+        // Traverse list
+        while (curNode != null){
+            nextNode = curNode.next;
+
+            // Traverse list, starting one ahead of pervious traversal
+            while(nextNode != null){
+                if(curNode.data > nextNode.data){
+                    temp = curNode.data;
+                    curNode.data = nextNode.data;
+                    nextNode.data = temp;
+                }
+                nextNode = nextNode.next;
+            }
+            curNode = curNode.next;
+        }
+    }
+
+    public void sortListDescending(){
+        Node curNode = head;
+        Node nextNode = null;
+        int temp; // variable to hold data while we swap.
+
+        // empty list, nothing to sort.
+        if (head == null){
+            return;
+        }
+
+        // Bubble sort
+        // Traverse List
+        while (curNode != null){
+            nextNode = curNode.next;
+
+            //Travse list, starting one ahead of previous traversal
+            while(nextNode != null){
+                if(curNode.data < nextNode.data){
+                    temp = curNode.data;
+                    curNode.data = nextNode.data;
+                    nextNode.data = temp;
+
+                }
+                nextNode = nextNode.next;
+            }
+            curNode = curNode.next;
+        }
+    }
+
+    /**
      * Function to print all the values currently in the Double Linked List.
      */
     public void printList(){
@@ -146,8 +223,13 @@ public class DoubleLinkedList {
 
         Node curNode = head;
         while(curNode != null){
-            System.out.print(curNode.data + ", ");
+            System.out.print(curNode.data);
             curNode = curNode.next;
+            if(curNode != null){
+                System.out.print(", ");
+            } else {
+                System.out.println();
+            }
         }
     }
 }

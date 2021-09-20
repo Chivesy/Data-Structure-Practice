@@ -96,6 +96,20 @@
         dll.insertAfter(dll.head.next, 50);
         dll.deleteNode(dll.head);
         dll.printList();
+        System.out.println("5 is in the list: " + dll.containsElement(5));
+        System.out.println("10 is in the list: " + dll.containsElement(10));
+        System.out.println("Sorting the double linked list in ascending order");
+        dll.sortListAscending();
+        dll.printList();
+        System.out.println("Sorting the double linked list in descending order");
+        dll.sortListDescending();
+        dll.printList();
+
+        System.out.println("Merging two linked lists");
+        DoubleLinkedList dlltwo = new DoubleLinkedList();
+        dlltwo.insertFront(30);
+        dlltwo.insertEnd(40);
+
 
     }
 }
