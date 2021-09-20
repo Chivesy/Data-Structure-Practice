@@ -118,10 +118,5 @@
         l2.head = mergedHead;
         dll.printList();
         l2.printList();
-
-
-
-
-
     }
 }
