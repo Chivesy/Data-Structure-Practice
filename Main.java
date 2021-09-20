@@ -106,9 +106,21 @@
         dll.printList();
 
         System.out.println("Merging two linked lists");
-        DoubleLinkedList dlltwo = new DoubleLinkedList();
-        dlltwo.insertFront(30);
-        dlltwo.insertEnd(40);
+        DoubleLinkedList l2 = new DoubleLinkedList();
+        l2.insertEnd(0);
+        l2.insertEnd(2);
+        l2.insertEnd(4);
+        l2.printList();
+        dll.sortListAscending();
+
+        DoubleLinkedList.Node mergedHead = DoubleLinkedList.mergeTwoLists(dll.head, l2.head);
+        // DoubleLinkedList.print(mergedHead);
+        l2.head = mergedHead;
+        dll.printList();
+        l2.printList();
+
+
+
 
 
     }

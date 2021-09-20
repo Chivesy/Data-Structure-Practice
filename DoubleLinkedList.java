@@ -213,6 +213,40 @@ public class DoubleLinkedList {
         }
     }
 
+    public static Node mergeTwoLists(Node l1, Node l2){
+        // New List
+        Node result = new Node(-1);
+  
+        // Last node of the list.
+        Node p = result;
+  
+        // Iterate the loop
+        while (l1 != null && l2 != null) {
+            // Find the smaller element and append it to the
+            // list.
+            if (l1.data <= l2.data) {
+                p.next = l1;
+                l1 = l1.next;
+            } else {
+                p.next = l2;
+                l2 = l2.next;
+            }
+            // Update the variable
+            p = p.next;
+        }
+  
+        // If either list become empty append remaining list
+        // element of other list.
+        if (l1 == null) {
+            p.next = l2;
+        } else if (l2 == null) {
+            p.next = l1;
+        }
+
+        // Return the resultant list without first extra node
+        return result.next;
+    }
+
     /**
      * Function to print all the values currently in the Double Linked List.
      */
@@ -230,6 +264,13 @@ public class DoubleLinkedList {
             } else {
                 System.out.println();
             }
+        }
+    }
+
+    public static void print(Node node){
+        while(node != null){
+            System.out.print(node.data + " ");
+            node = node.next;
         }
     }
 }
