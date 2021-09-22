@@ -1,3 +1,4 @@
+
 /**
  * The class Stack to create and implement a basic stack data structure using an array.
  * @author  Joseph Larson

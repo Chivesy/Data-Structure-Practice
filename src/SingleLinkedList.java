@@ -1,3 +1,4 @@
+
 /** The class SingleLinked list to create and implement a Single Linked List data structure
  * @author Joseph Larson
  */

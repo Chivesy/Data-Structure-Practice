@@ -1,3 +1,4 @@
+
 /** The class DoubleLinkedList to create and implement a double 
  * linked list data structure.
  * @author Joseph Larson

@@ -1,3 +1,4 @@
+
 /** 
  * The class StackAsLinkedList to create and implement a stack data structure using Linked Lists
  * @author Joseph Larson
