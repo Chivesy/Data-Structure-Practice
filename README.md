@@ -27,7 +27,7 @@ Overall this page and or project is for personal practice to review and improve 
 1) Clone repository
 2) Navigate to folder location installed
 3) Open terminal
-4) Run javadoc with javadoc -d ./docs *.java
+4) Run javadoc with javadoc -d ../docs *.java
 5) Navigate to created **./docs** folder
 6) Double click file **index.html** to open webpage for documentation
 
