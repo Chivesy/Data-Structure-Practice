@@ -17,7 +17,7 @@ Overall this page and or project is for personal practice to review and improve 
 
 **Steps to run program:**
 1) Clone repository
-2) Navigate to folder location installed
+2) Navigate to folder location installed, navigate to /src folder.
 3) Open terminal
 4) Compile with **make**  
 5) Run with **java Main**  
@@ -25,7 +25,7 @@ Overall this page and or project is for personal practice to review and improve 
 
 **Steps to run javadoc:**
 1) Clone repository
-2) Navigate to folder location installed
+2) Navigate to folder location installed, navigate to /src folder.
 3) Open terminal
 4) Run javadoc with javadoc -d ../docs *.java
 5) Navigate to created **./docs** folder
