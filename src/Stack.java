@@ -89,10 +89,10 @@ public class Stack {
      * Prints out all the values currently in the stack.
      */
     public void print() {
-        System.out.println("Elements currently present in Stack: ");
+        System.out.print("Elements currently present in Stack:");
         //Print stack from top to bottom
         for(int i = top; i >= 0; i--){
-            System.out.println(stack[i]);
+            System.out.print("\n" + stack[i]);
         }
     }
 }

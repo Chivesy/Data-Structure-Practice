@@ -1,4 +1,8 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import org.junit.Test;
 
@@ -28,7 +32,34 @@ public class StackTest {
         Stack myStack = new Stack();
         assertEquals(0, myStack.pop());
 
+        myStack.push(10);
         myStack.push(5);
         assertEquals(5, myStack.pop());
+        assertNotEquals(5, myStack.pop());
+        
+    }
+    
+    @Test
+    public void testPeek(){
+        Stack myStack = new Stack();
+        assertEquals(0, myStack.peek());
+
+        myStack.push(10);
+        assertEquals(10, myStack.peek());
+        assertNotEquals(5, myStack.peek());
+    }
+
+    @Test
+    public void testPrint(){
+        Stack myStack = new Stack();
+        myStack.push(1);
+        myStack.push(2);
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        myStack.print();
+
+        String expected = "Elements currently present in Stack:\n2\n1";
+        assertEquals(expected, outContent.toString());
     }
 }
