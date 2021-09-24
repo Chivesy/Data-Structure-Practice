@@ -46,7 +46,7 @@ public class StackAsLinkedList {
             root = newNode;
             newNode.next = temp;
         }
-        System.out.println(data + " pushed onto the stack");
+        System.out.print(data + " pushed onto the stack\n");
     }
 
     /**
@@ -55,7 +55,7 @@ public class StackAsLinkedList {
      */
     public int pop(){
         if(root == null){
-            System.out.println("Stack is currently Empty");
+            System.out.print("Stack is currently Empty\n");
             return Integer.MIN_VALUE;
         } else {
             int popped = root.data;
@@ -70,7 +70,7 @@ public class StackAsLinkedList {
      */
     public int peek(){
         if(root == null){
-            System.out.println("Stack is currently Empty");
+            System.out.print("Stack is currently Empty\n");
             return Integer.MIN_VALUE;
         } else {
             return root.data;
@@ -82,12 +82,12 @@ public class StackAsLinkedList {
      */
     public void print() {
         if(root == null){
-            System.out.println("Stack is currently Empty");
+            System.out.print("Stack is currently Empty\n");
         } else {
-            System.out.println("Elements currently present in Stack: ");
+            System.out.print("Elements currently present in Stack: \n");
             StackNode cur = root;
             while (cur != null){
-                System.out.println(cur.data);
+                System.out.print(cur.data + "\n");
                 cur = cur.next;
             }
         }
