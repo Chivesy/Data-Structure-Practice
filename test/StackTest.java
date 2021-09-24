@@ -59,7 +59,8 @@ public class StackTest {
         System.setOut(new PrintStream(outContent));
         myStack.print();
 
+        String result = outContent.toString();
         String expected = "Elements currently present in Stack:\n2\n1";
-        assertEquals(expected, outContent.toString());
+        assertEquals(expected, result);
     }
 }
