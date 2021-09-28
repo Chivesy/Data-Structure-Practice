@@ -23,11 +23,16 @@ public class SingleLinkedList {
     /** Function prints out contents of the linked list starting from head node. */
     public void printLinkedList(){
         if(head == null){
-            System.out.println("Linked List currently empty");
+            System.out.print("Linked List currently empty");
         }
         Node curNode = head;
         while(curNode != null){
-            System.out.println(curNode.data + " ");
+            if(curNode.next == null){
+                System.out.print(curNode.data + "\n");
+            }
+            else{
+                System.out.print(curNode.data + ", ");
+            }
             curNode = curNode.next;
         }
     }
@@ -40,7 +45,7 @@ public class SingleLinkedList {
         
         newNode.next = head;    //Next pointer now points to current head;
         head = newNode;         //Adjust head 
-        System.out.println(newData + ": added to Linked List");
+        System.out.print(newData + ": added to Linked List\n");
     }
     /**
      * Function to insert a new Node after a given node in list.
