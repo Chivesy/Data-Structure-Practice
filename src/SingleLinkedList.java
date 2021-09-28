@@ -81,7 +81,7 @@ public class SingleLinkedList {
         }
         cur.next = newNode;
         newNode.next = null;
-        System.out.println(newData + ": added to Linked List");
+        System.out.print(newData + ": added to Linked List\n");
         return;
     }
 

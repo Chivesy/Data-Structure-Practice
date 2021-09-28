@@ -41,4 +41,26 @@ public class SingleLinkedListTest {
         String expected = "10: added to Linked List\n";
         assertEquals(expected, result);
     }
+
+    @Test
+    public void insertEndTest(){
+        SingleLinkedList myList = new SingleLinkedList();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        myList.insertEnd(10);
+
+        String result = outContent.toString();
+        String expected = "10: added to Linked List\n";
+        assertEquals(expected, result);
+
+        myList.addToFront(15);
+        myList.insertEnd(50);
+
+        outContent.reset();
+        myList.printLinkedList();
+        result = outContent.toString();
+        expected = "15, 10, 50\n";
+
+        assertEquals(expected, result);
+    }
 }
