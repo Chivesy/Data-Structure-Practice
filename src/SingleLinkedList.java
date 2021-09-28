@@ -93,6 +93,7 @@ public class SingleLinkedList {
         //Check if headnode needs to be deleted
         if(head != null && head.data == keyData){
             head = head.next;
+            System.out.print(keyData + ": Removed from linked list.\n");
             return;
         }
 
@@ -106,12 +107,12 @@ public class SingleLinkedList {
 
         // Key was not found in Linked List
         if(curNode == null){
-            System.out.println(keyData + ": Not found in linked list.");
+            System.out.print(keyData + ": Not found in linked list.\n");
             return;
         }
         //Unlink the node from linked list
         prev.next = curNode.next;
-        System.out.println(keyData + ": Removed from linked list.");
+        System.out.print(keyData + ": Removed from linked list.\n");
     }
     /** Function to delete current linked list */
     public void deleteList(){

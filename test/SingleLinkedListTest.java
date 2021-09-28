@@ -63,4 +63,25 @@ public class SingleLinkedListTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void deleteKeyTest(){
+        SingleLinkedList myList = new SingleLinkedList();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        myList.deleteKey(5);
+
+        String result = outContent.toString();
+        String expected = "5: Not found in linked list.\n";
+        assertEquals(expected, result);
+
+        myList.addToFront(1);
+        myList.addToFront(3);
+        outContent.reset();
+        
+        myList.deleteKey(3);
+        result = outContent.toString();
+        expected = "3: Removed from linked list.\n";
+        assertEquals(expected, result);
+    }
 }
